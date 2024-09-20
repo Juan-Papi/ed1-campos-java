@@ -1,0 +1,29 @@
+  public void inver_03(){
+    
+      if(vacia()){
+          System.out.println("error lista vacia :( ");
+      }else{
+        
+      if(dim==1 || dim==2){
+      
+      }else{
+             nodo aux=l;
+      nodo ext=aux.getenlase().getenlase();
+      
+      while(ext!=null   && aux!=null){  //&& ext.getenlase()!=null
+          int x=aux.getdato();
+      int y= ext.getdato();
+      ext.setdato(x);
+      aux.setdato(y);
+      aux=ext.getenlase();
+      if(aux==null || aux.getenlase()==null){
+      ext=null;
+      }else{
+    
+      ext=aux.getenlase().getenlase();
+      
+      }
+      }//fin while
+      }
+      }
+      }
